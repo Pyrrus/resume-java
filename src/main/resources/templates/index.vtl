@@ -1,0 +1,42 @@
+<h1>Please Enter a Resume</h1>
+<form action="/resume" method="post">
+  <div class='form-group'>
+    <label for='user-title'>Job title:</label>
+    <input id='user-title' name='user-title' class='form-control' type='text'>
+  </div>
+  <div class='form-group'>
+    <label for='user-company'>Company:</label>
+    <input id='user-company' name='user-company' class='form-control' type='text'>
+  </div>
+  <div class='form-group'>
+    <label for='user-location'>Location:</label>
+    <input id='user-location' name='user-location' class='form-control' type='text'>
+  </div>
+  <div class='form-group'>
+    <label for='user-description'>Description:</label>
+    <textarea id='user-description' name='user-description' class='form-control'></textarea>
+  </div>
+  <div class='form-group'>
+    <label for='user-start'>Start date (in year):</label>
+    <input id='user-start' name='user-start' class='form-control' type='text'>
+  </div>
+  <div class='form-group'>
+    <label for='user-end'>End date (in year):</label>
+    <input id='user-end' name='user-end' class='form-control' type='text'>
+  </div>
+  <button type='submit' class='btn btn-success'>Submit</button>
+</form>
+#if ($resumes)
+  <ul>
+    #foreach ($resume in $resumes)
+    <li>$resume.getTitle()</li>
+    <li>$resume.getCompany()</li>
+    <li>$resume.getLocation()</li>
+    <li>$resume.getDescription()</li>
+    <li>$resume.getStartDate()</li>
+    <li>$resume.getEndDate()</li>
+    #end
+  </ul>
+#else
+  <p>No Resume Information</p>
+#end
