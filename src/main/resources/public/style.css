@@ -1,0 +1,40 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h3 {
+  font-family: 'Righteous', cursive;
+  font-size: 30px;
+}
+
+label {
+  font-size: 18px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img#background {
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  img#background {
+    left: 50%;
+    margin-left: -512px;
+  }
+}
